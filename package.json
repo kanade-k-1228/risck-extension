@@ -1,0 +1,46 @@
+{
+  "name": "risck-language-extension",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanade-k-1228/risck-extension.git"
+  },
+  "engines": {
+    "vscode": "^1.33.1"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onLanguage:risck"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "risck.helloWorld",
+        "title": "RiscK Mode: say hello world"
+      },
+      {
+        "command": "risck.formatFile",
+        "title": "RiscK Mode: format file"
+      }
+    ],
+    "languages": [
+      {
+        "id": "risck",
+        "aliases": [
+          "RISC-K"
+        ],
+        "extensions": [
+          ".rk"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "risck",
+        "scopeName": "source.risck",
+        "path": "./risck.tmLanguage.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "scopeName": "source.risck",
+  "name": "risck",
+  "patterns": [
+    {
+      "include": "#keywords"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "comment.line.risck",
+          "match": ";.*"
+        },
+        {
+          "name": "variable.language.risck",
+          "match": "_(zero|reset|intr|iret|main|ret)(:?)"
+        },
+        {
+          "name": "keyword.control.risck",
+          "match": "((add|sub|and|or|xor)i?|(not|lrot|rrot)|loadi|load|store|jump|breq|brlt)\\s"
+        },
+        {
+          "name": "keyword.other.risck",
+          "match": "zero|cout|ira|csr|sp|fp|ra|((a|t|s)\\d)"
+        },
+        {
+          "name": "constant.numeric.risck",
+          "match": "\\s((0x)[\\h']*|(0b)[01']*|[\\d']*)"
+        },
+        {
+          "name": "entity.name.function.risck",
+          "match": "[a-zA-Z][0-9a-zA-Z]*:?"
+        }
+      ]
+    }
+  }
+}
