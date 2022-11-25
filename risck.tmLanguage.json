@@ -16,23 +16,35 @@
         },
         {
           "name": "variable.language.risck",
-          "match": "_(zero|reset|intr|iret|main|ret)(:?)"
+          "match": "\\b_(.*)(:?)"
         },
         {
           "name": "keyword.control.risck",
-          "match": "((add|sub|and|or|xor)i?|(not|lrot|rrot)|loadi|load|store|jump|breq|brlt)\\s"
+          "match": "((add|sub|and|or|xor)i?|(not|lrot|rrot)|loadi|load|store|jump|breq|brlt)"
         },
         {
           "name": "keyword.other.risck",
-          "match": "zero|cout|ira|csr|sp|fp|ra|((a|t|s)\\d)"
+          "match": "\\s(zero|cout|ira|csr|sp|fp|ra|s0|s1|s2|s3|t0|t1|t2|t3|a0|a1|a2|a3)"
+        },
+        {
+          "name": "variable.risck",
+          "match": "@((0x)[\\h']*|(0b)[01']*|[\\d']*)"
         },
         {
           "name": "constant.numeric.risck",
-          "match": "\\s((0x)[\\h']*|(0b)[01']*|[\\d']*)"
+          "match": "#((0x)[\\h']*|(0b)[01']*|[\\d']*)"
+        },
+        {
+          "name": "string.quoted.single.risck",
+          "match": "'.*'"
+        },
+        {
+          "name": "constant.numeric.risck",
+          "match": "\\s((0x)\\h[\\h']*|(0b)[01][01']*|\\d[\\d']*)"
         },
         {
           "name": "entity.name.function.risck",
-          "match": "[a-zA-Z][0-9a-zA-Z]*:?"
+          "match": "\\.?[a-zA-Z][0-9a-zA-Z]*:?"
         }
       ]
     }
