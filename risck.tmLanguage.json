@@ -20,7 +20,7 @@
         },
         {
           "name": "keyword.control.risck",
-          "match": "((add|sub|and|or|xor|eq|lts|ltu)i?|(not|srs|sru|sl|lcast)|loadi|load|store|jmpif|fctrl|call|ret|iret)"
+          "match": "((add|sub|and|or|xor|eq|lts|ltu)i?|(not|srs|sru|sl|lcast)|loadi|load|store|mov|jmpif|fctrl|call|ret|iret)"
         },
         {
           "name": "keyword.other.risck",
