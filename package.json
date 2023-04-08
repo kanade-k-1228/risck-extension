@@ -15,10 +15,6 @@
   "contributes": {
     "commands": [
       {
-        "command": "risck.helloWorld",
-        "title": "RiscK Mode: say hello world"
-      },
-      {
         "command": "risck.formatFile",
         "title": "RiscK Mode: format file"
       }
