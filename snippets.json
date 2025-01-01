@@ -1,0 +1,12 @@
+{
+    "ADD-RRR": {
+      "prefix": "add",
+      "body": ["add  ${1:t0} ${2:t0} ${3:t0}"],
+      "description": "rk16: add"
+    },
+    "MOV-RR": {
+      "prefix": "mov",
+      "body": ["mov  ${1:t0} ${2:t0}"],
+      "description": "rk16: mov"
+    }
+}

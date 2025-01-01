@@ -37,6 +37,12 @@
         "scopeName": "source.risck",
         "path": "./risck.tmLanguage.json"
       }
+    ],
+    "snippets": [
+      {
+        "language": "risck",
+        "path": "./snippets.json"
+      }
     ]
   }
 }

@@ -1,6 +1,12 @@
 # RISC-K
 
-1. run `npx vsce package` to build
+1. build
+
+```
+$ npm install -g @vscode/vsce
+$ vsce package
+```
+
 2. install `.vsix` to VSCode
 
 RISC-K アセンブラの拡張機能

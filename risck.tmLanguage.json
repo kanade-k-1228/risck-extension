@@ -20,11 +20,11 @@
         },
         {
           "name": "keyword.control.risck",
-          "match": "((add|sub|and|or|xor|eq|lts|ltu)i?|(not|srs|sru|sl|lcast)|nop|mov|loadi|load|store|jump|if|call|ret|iret)"
+          "match": "((add|sub|and|or|xor|eq|neq|lts|lt)i?|not|(sr)(s|r)?|(sl)r?|nop|mov|loadi|load|store|(jump|if)r?|call|ret|iret)"
         },
         {
           "name": "keyword.other.risck",
-          "match": "\\s(zero|pc|ira|csr|ra|sp|fp|cout|s0|s1|s2|s3|t0|t1|t2|t3)"
+          "match": "\\s(z|ira|pc|sp|ra|fp|a0|a1|s0|s1|s2|s3|t0|t1|t2|t3)"
         },
         {
           "name": "variable.risck",
