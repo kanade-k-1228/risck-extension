@@ -2,73 +2,74 @@ const vscode = require("vscode");
 
 function hoverText(keyword) {
   switch (keyword) {
-    case "addi":
-      return "`RD = RS + IMM`";
     case "add":
-      return "`RD = RS1 + RS2`";
-    case "subi":
-      return "`RD = RS - IMM`";
+      return "`rd = rs1 + rs2`";
+    case "addi":
+      return "`rd = rs + imm`";
     case "sub":
-      return "`RD = RS1 - RS2`";
-    case "andi":
-      return "`RD = RS1 & IMM`";
+      return "`rd = rs1 - rs2`";
+    case "subi":
+      return "`rd = rs - imm`";
     case "and":
-      return "`RD = RS1 & RS2`";
-    case "ori":
-      return "`RD = RS | IMM`";
+      return "`rd = rs1 & rs2`";
+    case "andi":
+      return "`rd = rs1 & imm`";
     case "or":
-      return "`RD = RS1 | RS2`";
-    case "xori":
-      return "`RD = RS ^ IMM`";
+      return "`rd = rs1 | rs2`";
+    case "ori":
+      return "`rd = rs | imm`";
     case "xor":
-      return "`RD = RS1 ^ RS2`";
+      return "`rd = rs1 ^ rs2`";
+    case "xori":
+      return "`rd = rs ^ imm`";
     case "not":
-      return "`RD = ~RS1`";
+      return "`rd = ~rs1`";
+    case "sr":
+      return "`rd = rs1 >> 1`";
     case "srs":
-      return "`RD = RS1 >> 1 (Shift Right Signed)";
-    case "sru":
-      return "`RD = RS1 >> 1 (Shift Right Unsigned)";
+      return "`rd = rs1 >> 1 (Signed)`";
+    case "srr":
+      return "`rd = rs1 >> 1 (Rotate)`";
     case "sl":
-      return "`RD = RS1 << 1 (Shift Left)";
-    case "eqi":
-      return "`RD = RS == IMM`";
+      return "`rd = rs1 << 1`";
+    case "slr":
+      return "`rd = rs1 << 1 (Rotate)`";
     case "eq":
-      return "`RD = RS1 == RS2`";
-    case "neqi":
-      return "`RD = RS1 != IMM`";
+      return "`rd = rs1 == rs2`";
+    case "eqi":
+      return "`rd = rs == imm`";
     case "neq":
-      return "`RD = RS1 != RS2`";
-    case "ltsi":
-      return "`RD = RS < IMM (Signed)`";
-    case "lts":
-      return "`RD = RS1 < RS2 (Signed)`";
-    case "lti":
-      return "`RD = RS < IMM (Unsigned)`";
+      return "`rd = rs1 != rs2`";
+    case "neqi":
+      return "`rd = rs1 != imm`";
     case "lt":
-      return "`RD = RS1 < RS2 (Unsigned)`";
-    case "lcast":
-      return "`RD = RS1==0 ? 0x0000 : 0xFFFF`";
-
+      return "`rd = rs1 < rs2 (Unsigned)`";
+    case "lti":
+      return "`rd = rs < imm (Unsigned)`";
+    case "lts":
+      return "`rd = rs1 < rs2 (Signed)`";
+    case "ltsi":
+      return "`rd = rs < imm (Signed)`";
     case "nop":
-      return "`(´・ω・\`)`";
+      return "(´・ω・`)";
     case "mov":
-      return "`RD <= RS`";
+      return "`rd <= rs`";
     case "loadi":
-      return "`RD <= IMM`";
+      return "`rd <= imm`";
     case "load":
-      return "`RD <= RAM[RS + IMM]`";
+      return "`rd <= RAM[rs + imm]`";
     case "store":
-        return "`RS => RAM[RS + IMM]`";
+      return "`rs => RAM[rs + imm]`";
     case "if":
-      return "`IF(COND==0) PC = IMM`";
+      return "`IF(rs==0) PC = imm`";
     case "ifr":
-      return "`IF(COND==0) PC += IMM`";
+      return "`IF(rs==0) PC += imm`";
     case "jump":
-      return "`PC = IMM`";
+      return "`PC = imm`";
     case "jumpr":
-      return "`PC += IMM`";
+      return "`PC += imm`";
     case "call":
-      return "`RA = PC + 1, PC = IMM`";
+      return "`RA = PC + 1, PC = imm`";
     case "ret":
       return "`PC = RA`";
     case "iret":
